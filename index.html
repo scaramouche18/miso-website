@@ -1,110 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Miso - Personalized gifting made adorable with Miso the Bear. Discover star maps, wooden keychains, frames and more." />
+  <meta name="keywords" content="personalized gifts, miso, custom gifts, gifting brand, cute gifts, miso the bear" />
+  <meta name="author" content="Miso by Arin" />
+  <meta name="robots" content="index, follow">
   <title>Miso</title>
-  <meta name="description" content="Miso is a heart-led gifting brand that turns imagination into beautiful personalized gifts.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
     }
-    .tagline {
-      font-family: 'Dancing Script', cursive;
+
+    h1, h2, h3 {
+      letter-spacing: -0.5px;
+    }
+
+    #loader {
+      transition: opacity 0.5s ease;
     }
   </style>
 </head>
-<body class="flex flex-col min-h-screen bg-white text-[#2D2D5D]">
 
-  <!-- NAVBAR -->
-  <header class="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-[#F8A3D8] via-[#B3E5FC] to-[#A066F8] text-white shadow-md sticky top-0 z-50">
-    <div class="flex items-center gap-3">
-      <img src="assets/images/miso-logo.png" alt="Miso Logo" class="h-10">
-      <span class="text-xl font-semibold">Miso</span>
-    </div>
-    <nav class="hidden md:flex gap-6 text-sm font-semibold">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="about.html" class="hover:underline">About</a>
-      <a href="products.html" class="hover:underline">Products</a>
-      <a href="blog.html" class="hover:underline">Blog</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
+<body class="bg-white text-gray-900">
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
+    <img src="assets/images/animated-bear-ezgif.com-loop-count.gif" alt="Loading Miso Bear" class="w-32 h-32 animate-bounce">
+    <p class="mt-4 text-lg font-semibold">Loading...</p>
+  </div>
+
+  <!-- Navbar -->
+<header class="sticky top-0 z-40 bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-3 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/index.html" class="flex items-center space-x-2">
+      <img src="/assets/images/miso-logo.png" alt="Miso Logo" class="h-10 w-auto">
+      <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="hidden md:flex gap-6 text-gray-800 font-semibold">
+      <a href="/index.html" class="hover:text-pink-500 transition">Home</a>
+      <a href="/about.html" class="hover:text-pink-500 transition">About</a>
+      <a href="/products.html" class="hover:text-pink-500 transition">Products</a>
+      <a href="/blog.html" class="hover:text-pink-500 transition">Blog</a>
+      <a href="/contact.html" class="hover:text-pink-500 transition">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <!-- HERO SECTION -->
-  <section class="flex items-center justify-center text-center px-6 min-h-[100vh]">
-    <div>
-      <h1 class="text-4xl md:text-5xl font-bold tagline text-[#7B4AE2] mb-6">You Imagine, We Create</h1>
-      <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-        Thoughtfully crafted gifts that speak from the heart. Minimal, meaningful, and made just for you.
-      </p>
-      <a href="products.html" class="inline-block bg-[#A066F8] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#8b4ae2] transition-all">
-        Explore Gifts
-      </a>
-    </div>
-  </section>
+<!-- Hero -->
+<section id="home" class="h-screen flex items-center justify-center text-center bg-gradient-to-br from-pink-100 via-white to-purple-100">
+  <div data-aos="fade-up">
+    <h2 class="text-4xl md:text-6xl font-extrabold text-pink-600 mb-4">We Gift, You Imagine</h2>
+    <p class="text-lg md:text-xl text-gray-700">Explore heartfelt personalized gifts by Miso.</p>
+  </div>
+</section>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="px-6 py-12 max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl font-bold mb-4">Our Story</h2>
-    <p class="text-gray-600">
-      Miso is more than a gifting brand. It’s a story of love, expression, and personal connection. 
-      Every product we create is made to reflect a memory, a moment, or a feeling.
-    </p>
-    <a href="about.html" class="mt-4 inline-block text-[#7B4AE2] font-semibold hover:underline">Read More</a>
-  </section>
+<!-- About Section -->
+<section id="about" class="py-16 px-6 bg-gray-50" data-aos="fade-down">
+  <div class="max-w-3xl mx-auto text-center" data-aos="zoom-in">
+    <h3 class="text-3xl font-bold mb-4">About Us</h3>
+    <p class="mb-4">Miso was born out of a desire to turn feelings into tangible joy. Our mission is simple: to make gifting more heartfelt, unique, and personal.</p>
+    <p class="mb-4">Our mascot, Miso the Bear, symbolizes comfort, creativity, and companionship. And yes, every gift has a bit of Miso magic in it.</p>
+    <p class="text-gray-500 italic">Founded by Apoorv Arin</p>
+  </div>
+</section>
 
-  <!-- PRODUCTS PREVIEW -->
-  <section class="bg-gray-50 px-6 py-12">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">Popular Categories</h2>
-      <p class="text-gray-600 mb-8">Curated collections for every kind of gift-giver</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-4 rounded-lg shadow">
-          <img src="assets/images/sky.png" alt="Keychains" class="rounded mb-3">
-          <h3 class="font-semibold text-lg">Personalised Sky Map</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <img src="assets/images/wooden-key.png" alt="Message Jars" class="rounded mb-3">
-          <h3 class="font-semibold text-lg">Customized Keychains</h3>
-
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <img src="assets/images/mini-frame.png" alt="Photo Gifts" class="rounded mb-3">
-          <h3 class="font-semibold text-lg">Photo Frames & Art</h3>
-        </div>
+<!-- Products -->
+<section id="products" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-down">Popular Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-white p-4 rounded-xl shadow-lg" data-aos="zoom-in">
+        <img src="assets/images/sky.png" alt="Personalised starry sky map gift" class="rounded-lg mb-4">
+        <h3 class="font-semibold text-lg">Star Map</h3>
       </div>
-      <a href="products.html" class="mt-6 inline-block text-[#7B4AE2] font-semibold hover:underline">View All Products</a>
+      <div class="bg-white p-4 rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+        <img src="assets/images/wooden-key.png" alt="Engraved wooden keychain" class="rounded-lg mb-4">
+        <h3 class="font-semibold text-lg">Wooden Keychain</h3>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+        <img src="assets/images/mini-frame.png" alt="Mini photo frame with custom art" class="rounded-lg mb-4">
+        <h3 class="font-semibold text-lg">Mini Frame</h3>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- BLOG PREVIEW -->
-  <section class="px-6 py-12 max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl font-bold mb-4">From the Blog</h2>
-    <p class="text-gray-600 mb-6">Tips on gifting, stories from our customers, and behind-the-scenes insights.</p>
-    <a href="blog.html" class="text-[#7B4AE2] font-semibold hover:underline">Visit Blog</a>
-  </section>
+<!-- Blog Section -->
+<section id="blog" class="py-20 px-6 bg-gradient-to-r from-pink-50 to-white" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h3 class="text-4xl font-extrabold text-gray-800 mb-4 tracking-tight">Stories That Touch</h3>
+    <p class="text-gray-600 mb-8">Dive into heartfelt stories, gifting ideas, and behind-the-scenes from the world of Miso.</p>
+    <a href="/blog.html" target="_blank" class="inline-block bg-pink-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-pink-600 transition">Visit Our Blog</a>
+  </div>
+</section>
 
-  <!-- CONTACT PREVIEW -->
-  <section class="bg-gray-100 px-6 py-12 text-center">
-    <h2 class="text-2xl font-bold mb-4">Get In Touch</h2>
-    <p class="text-gray-600 mb-4">DM us on Instagram, WhatsApp, or use our order form to get started!</p>
-    <a href="contact.html" class="bg-[#7B4AE2] text-white px-5 py-3 rounded-full font-semibold hover:bg-[#5e37cc] transition-all">Contact Us</a>
-  </section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-6 bg-white border-t border-gray-200" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h3 class="text-4xl font-extrabold text-gray-800 mb-4">Let’s Connect 📬</h3>
+    <p class="text-gray-600 mb-8">Have a question, a custom gift idea, or just want to say hi? We're here for it.</p>
+    <div class="space-y-3 text-lg text-gray-700">
+      <p>Email: <a href="mailto:hello@misogifts.in" class="text-pink-500 hover:underline">hello@misogifts.in</a></p>
+      <p>Instagram: <a href="https://instagram.com/misogifts" target="_blank" class="text-pink-500 hover:underline">@misogifts</a></p>
+      <p>WhatsApp: <a href="https://wa.me/919999999999" target="_blank" class="text-pink-500 hover:underline">+91-9999999999</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Bear and Chat Button -->
+<div class="fixed bottom-4 left-4 flex flex-col items-center space-y-2 z-50">
+  <img src="assets/images/animated-bear-ezgif.com-loop-count.gif" alt="Miso Bear Floating" class="w-16 h-16 animate-bounce">
+  <a href="https://instagram.com/miso__by_arin" target="_blank" class="bg-pink-500 text-white px-4 py-2 rounded-full shadow hover:bg-pink-600 transition">Chat with us</a>
+</div>
 
   <!-- FOOTER -->
-  <footer class="text-center text-sm py-6 bg-gradient-to-r from-[#F8A3D8] via-[#B3E5FC] to-[#A066F8] text-white mt-auto">
-    <p>Made with 💖 by Miso | © 2025</p>
-  </footer>
-<a href="https://instagram.com/miso__by_arin" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   class="fixed bottom-5 right-5 bg-gradient-to-r from-pink-400 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 z-50">
-   💬 DM us on Insta
-</a>
+<footer class="text-center text-sm py-6 bg-gradient-to-r from-[#F8A3D8] via-[#D1C4E9] to-[#A066F8] text-gray-900 font-semibold">
+  <p>&copy; 2025 Miso by Arin. All rights reserved.</p>
+</footer>
 
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+  });
+
+  window.addEventListener("load", function () {
+    document.getElementById("loader").style.opacity = 0;
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+    }, 500);
+  });
+</script>
 </body>
 </html>

@@ -16,20 +16,26 @@
 </head>
 <body class="flex flex-col min-h-screen bg-white text-[#2D2D5D]">
 
-  <!-- NAVBAR -->
-  <header class="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-[#F8A3D8] via-[#B3E5FC] to-[#A066F8] text-white shadow-md sticky top-0 z-50">
-    <div class="flex items-center gap-3">
-      <img src="assets/images/Screenshot 2025-07-29 at 9.37.37 AM.png" alt="Miso Logo" class="h-10">
-      <span class="text-xl font-semibold">Miso</span>
-    </div>
-    <nav class="hidden md:flex gap-6 text-sm font-semibold">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="about.html" class="hover:underline">About</a>
-      <a href="products.html" class="hover:underline">Products</a>
-      <a href="blog.html" class="hover:underline">Blog</a>
-      <a href="contact.html" class="underline font-bold">Contact</a>
+ 
+  <!-- Navbar -->
+<header class="sticky top-0 z-40 bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-3 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/index.html" class="flex items-center space-x-2">
+      <img src="/assets/images/miso-logo.png" alt="Miso Logo" class="h-10 w-auto">
+      <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="hidden md:flex gap-6 text-gray-800 font-semibold">
+      <a href="/index.html" class="hover:text-pink-500 transition">Home</a>
+      <a href="/about.html" class="hover:text-pink-500 transition">About</a>
+      <a href="/products.html" class="hover:text-pink-500 transition">Products</a>
+      <a href="/blog.html" class="hover:text-pink-500 transition">Blog</a>
+      <a href="/contact.html" class="hover:text-pink-500 transition">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
   <!-- CONTACT SECTION -->
   <section class="px-6 py-16 max-w-2xl mx-auto text-center">
@@ -65,9 +71,9 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="text-center text-sm py-6 bg-gradient-to-r from-[#F8A3D8] via-[#B3E5FC] to-[#A066F8] text-white mt-auto">
-    <p>Made with 💖 by Miso | © 2025</p>
-  </footer>
+<footer class="text-center text-sm py-6 bg-gradient-to-r from-[#F8A3D8] via-[#D1C4E9] to-[#A066F8] text-gray-900 font-semibold">
+  <p>&copy; 2025 Miso by Arin. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
