@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Miso</title>
+  <meta name="description" content="Read gifting guides, Miso updates, and creative celebration ideas.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen bg-white text-[#2D2D5D]">
+
+  <!-- NAVBAR -->
+  <header class="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-[#F8A3D8] via-[#B3E5FC] to-[#A066F8] text-white shadow-md sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+      <img src="assets/images/Screenshot 2025-07-29 at 9.37.37 AM.png" alt="Miso Logo" class="h-10">
+      <span class="text-xl font-semibold">Miso</span>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm font-semibold">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="products.html" class="hover:underline">Products</a>
+      <a href="blog.html" class="underline font-bold">Blog</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <!-- BLOG SECTION -->
+  <section class="px-6 py-16 max-w-5xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-10">Latest from the Blog</h1>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- BLOG CARD 1 -->
+      <article class="bg-white border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
+        <img src="assets/images/blog1.jpg" alt="Gift Ideas" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-semibold mb-2">Top 10 Personalized Gift Ideas in 2025</h2>
+          <p class="text-sm text-gray-600 mb-4">Looking to impress your loved ones with something meaningful? Here’s a roundup of our favorite gift trends this year.</p>
+          <a href="#" class="text-[#A066F8] font-medium hover:underline">Read more →</a>
+        </div>
+      </article>
+
+      <!-- BLOG CARD 2 -->
+      <article class="bg-white border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
+        <img src="assets/images/blog2.jpg" alt="Birthday Gifts" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-semibold mb-2">Miso’s Guide to the Perfect Birthday Box</h2>
+          <p class="text-sm text-gray-600 mb-4">Our top recommendations for curating a beautiful and memorable birthday surprise.</p>
+          <a href="#" class="text-[#A066F8] font-medium hover:underline">Read more →</a>
+        </div>
+      </article>
+
+      <!-- BLOG CARD 3 -->
+      <article class="bg-white border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
+        <img src="assets/images/blog3.jpg" alt="Festive Packaging" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-semibold mb-2">Behind the Scenes: How We Pack with Love</h2>
+          <p class="text-sm text-gray-600 mb-4">A look into Miso’s packaging process and what makes our gifts extra special.</p>
+          <a href="#" class="text-[#A066F8] font-medium hover:underline">Read more →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-sm py-6 bg-gradient-to-r from-[#F8A3D8] via-[#B3E5FC] to-[#A066F8] text-white mt-auto">
+    <p>Made with 💖 by Miso | © 2025</p>
+  </footer>
+
+</body>
+</html>

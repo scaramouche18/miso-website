@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Miso</title>
+  <meta name="description" content="Reach out to Miso for personalized gift orders or collaborations.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen bg-white text-[#2D2D5D]">
+
+  <!-- NAVBAR -->
+  <header class="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-[#F8A3D8] via-[#B3E5FC] to-[#A066F8] text-white shadow-md sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+      <img src="assets/images/Screenshot 2025-07-29 at 9.37.37 AM.png" alt="Miso Logo" class="h-10">
+      <span class="text-xl font-semibold">Miso</span>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm font-semibold">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="products.html" class="hover:underline">Products</a>
+      <a href="blog.html" class="hover:underline">Blog</a>
+      <a href="contact.html" class="underline font-bold">Contact</a>
+    </nav>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="px-6 py-16 max-w-2xl mx-auto text-center">
+    <h1 class="text-3xl font-bold mb-4">Send Us a Message</h1>
+    <p class="text-gray-600 mb-8">Have a question or want to order a custom gift? We'd love to hear from you!</p>
+    
+    <form class="space-y-6">
+      <div>
+        <label class="block text-left font-medium mb-1">Name</label>
+        <input type="text" placeholder="Your name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]">
+      </div>
+      <div>
+        <label class="block text-left font-medium mb-1">Email</label>
+        <input type="email" placeholder="you@example.com" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]">
+      </div>
+      <div>
+        <label class="block text-left font-medium mb-1">Message</label>
+        <textarea rows="5" placeholder="Your message..." class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]"></textarea>
+      </div>
+      <button type="submit" class="bg-[#A066F8] text-white font-semibold px-6 py-2 rounded-full hover:bg-[#8b4ae2] transition-all">
+        Send Message
+      </button>
+    </form>
+
+    <div class="mt-12">
+      <p class="text-lg font-semibold mb-2">Or contact us directly:</p>
+      <div class="flex flex-col items-center gap-3 text-sm text-gray-600">
+        <a href="https://wa.me/919119733531" target="_blank" class="hover:underline">📱 WhatsApp: +91 9119733531</a>
+        <a href="https://www.instagram.com/miso__by_arin/" target="_blank" class="hover:underline">📷 Instagram: @miso__by_arin</a>
+        <a href="mailto:misogifts@gmail.com" class="hover:underline">✉️ Email: misogifts@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-sm py-6 bg-gradient-to-r from-[#F8A3D8] via-[#B3E5FC] to-[#A066F8] text-white mt-auto">
+    <p>Made with 💖 by Miso | © 2025</p>
+  </footer>
+
+</body>
+</html>
