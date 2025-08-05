@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog | Miso</title>
+  <link rel="icon" href="/assets/images/miso-logo.png" type="image/png" />
   <meta name="description" content="Read gifting guides, Miso updates, and creative celebration ideas.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -15,32 +17,45 @@
 </head>
 <body class="flex flex-col min-h-screen bg-white text-[#2D2D5D]">
 
- 
-
- <!-- Navbar -->
-<header class="sticky top-0 z-40 bg-white shadow-md">
+<!-- Navbar -->
+<header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md shadow-md">
   <div class="max-w-7xl mx-auto px-6 md:px-10 py-3 flex justify-between items-center">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
-      <img src="./assets/images/miso-logo.png" alt="Miso Logo" class="h-10 w-auto">
-      <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span>
+      <div class="logo-hover">
+        <img src="assets/images/miso-logo-removebg-preview-removebg-preview.png" alt="Miso Logo" class="h-14 w-auto logo-hover-effect" />
+      </div>
     </a>
 
-    <!-- Navbar -->
-   <nav class="hidden md:flex items-center gap-6 text-gray-800 font-semibold">
+    <!-- Desktop Navbar -->
+    <nav class="hidden md:flex items-center gap-6 text-gray-800 font-semibold">
       <a href="index.html" class="hover:text-pink-500 transition">Home</a>
       <a href="about.html" class="hover:text-pink-500 transition">About</a>
       <a href="products.html" class="hover:text-pink-500 transition">Products</a>
       <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
       <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
-
       <div class="flex gap-2 ml-2">
         <a href="login.html" class="bg-pink-500 text-white px-4 py-1.5 rounded-lg shadow hover:bg-pink-600 transition">Login</a>
       </div>
     </nav>
+
+    <!-- Hamburger Icon -->
+    <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none text-3xl">☰</button>
   </div>
+
+  <!-- Mobile Nav -->
+  <nav id="mobile-menu" class="absolute top-16 right-4 bg-white shadow-lg rounded-lg z-50 w-48 transform scale-0 origin-top-right transition-transform duration-300 md:hidden flex flex-col p-4 text-gray-800 font-semibold space-y-3">
+    <a href="index.html" class="hover:text-pink-500 transition">Home</a>
+    <a href="about.html" class="hover:text-pink-500 transition">About</a>
+    <a href="products.html" class="hover:text-pink-500 transition">Products</a>
+    <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
+    <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+    <a href="./login.html" class="bg-pink-500 text-white px-4 py-1 rounded-lg w-fit">Login</a>
+  </nav>
 </header>
 
+<!-- MAIN CONTENT -->
+<main class="flex-grow">
   <!-- BLOG SECTION -->
   <section class="px-6 py-16 max-w-5xl mx-auto">
     <h1 class="text-4xl font-bold text-center mb-10">Latest from the Blog</h1>
@@ -48,7 +63,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- BLOG CARD 1 -->
       <article class="bg-white border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
-        <img src="assets/images/blog1.jpg" alt="Gift Ideas" class="w-full h-48 object-cover">
+        <img src="assets/images/top10-blog.png" alt="Gift Ideas" class="w-full h-48 object-cover">
         <div class="p-5">
           <h2 class="text-xl font-semibold mb-2">Top 10 Personalised Gift Ideas in 2025</h2>
           <p class="text-sm text-gray-600 mb-4">Looking to impress your loved ones with something meaningful? Here’s a roundup of our favorite gift trends this year.</p>
@@ -58,7 +73,7 @@
 
       <!-- BLOG CARD 2 -->
       <article class="bg-white border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
-        <img src="assets/images/blog2.jpg" alt="Birthday Gifts" class="w-full h-48 object-cover">
+        <img src="assets/images/star-blog.png" alt="Birthday Gifts" class="w-full h-48 object-cover">
         <div class="p-5">
           <h2 class="text-xl font-semibold mb-2">Miso’s Guide to the Perfect Birthday Box</h2>
           <p class="text-sm text-gray-600 mb-4">Our top recommendations for curating a beautiful and memorable birthday surprise.</p>
@@ -68,7 +83,7 @@
 
       <!-- BLOG CARD 3 -->
       <article class="bg-white border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
-        <img src="assets/images/blog3.jpg" alt="Festive Packaging" class="w-full h-48 object-cover">
+        <img src="assets/images/wooden-art-blog.png" alt="Festive Packaging" class="w-full h-48 object-cover">
         <div class="p-5">
           <h2 class="text-xl font-semibold mb-2">Behind the Scenes: How We Pack with Love</h2>
           <p class="text-sm text-gray-600 mb-4">A look into Miso’s packaging process and what makes our gifts extra special.</p>
@@ -77,11 +92,13 @@
       </article>
     </div>
   </section>
+</main>
 
-   <!-- FOOTER -->
+<!-- FOOTER -->
 <footer class="text-center text-sm py-6 bg-gradient-to-r from-[#F8A3D8] via-[#D1C4E9] to-[#A066F8] text-gray-900 font-semibold">
   <p>&copy; 2025 Miso by Arin. All rights reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

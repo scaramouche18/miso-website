@@ -4,31 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign Up - Miso</title>
+  <link rel="icon" href="/assets/images/miso-logo.png" type="image/png" />
   <link rel="icon" href="./assets/images/miso-logo.png">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-b from-pink-100 to-white min-h-screen">
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-40 bg-white shadow-md">
+<header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md shadow-md">
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-3 flex justify-between items-center">
-      <!-- Logo -->
+           <!-- Logo -->
       <a href="index.html" class="flex items-center space-x-2">
-        <img src="./assets/images/miso-logo.png" alt="Miso Logo" class="h-10 w-auto">
-        <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span>
+        <!-- Soft bubble background around logo -->
+        <div class=" logo-hover">
+            <img src="assets/images/miso-logo-removebg-preview-removebg-preview.png" alt="Miso Logo" class="h-14 w-auto logo-hover-effect" />
+        </div>
+        <!-- <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span> -->
       </a>
 
       <!-- Navbar links -->
-     <nav class="hidden md:flex items-center gap-6 text-gray-800 font-semibold">
+       <!-- Desktop Navbar -->
+      <nav class="hidden md:flex items-center gap-6 text-gray-800 font-semibold">
+        <a href="index.html" class="hover:text-pink-500 transition">Home</a>
+        <a href="about.html" class="hover:text-pink-500 transition">About</a>
+        <a href="products.html" class="hover:text-pink-500 transition">Products</a>
+        <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
+        <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+        <div class="flex gap-2 ml-2">
+        <a href="login.html" class="bg-pink-500 text-white px-4 py-1.5 rounded-lg shadow hover:bg-pink-600 transition">Login</a>
+        </div>
+      </nav>
+
+      <!-- Hamburger Icon -->
+      <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none text-3xl">
+        ☰
+      </button>
+    </div>
+    <!-- Mobile Nav (Right Side Drawer) -->
+    <!-- Compact Floating Sidebar (Top-Right) -->
+    <nav id="mobile-menu"
+      class="absolute top-16 right-4 bg-white shadow-lg rounded-lg z-50 w-48 transform scale-0 origin-top-right transition-transform duration-300 md:hidden flex flex-col p-4 text-gray-800 font-semibold space-y-3">
       <a href="index.html" class="hover:text-pink-500 transition">Home</a>
       <a href="about.html" class="hover:text-pink-500 transition">About</a>
       <a href="products.html" class="hover:text-pink-500 transition">Products</a>
       <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
       <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
-
-      <div class="flex gap-2 ml-2">
-        <a href="login.html" class="bg-pink-500 text-white px-4 py-1.5 rounded-lg shadow hover:bg-pink-600 transition">Login</a>
-      </div>
+      <a href="./login.html" class="bg-pink-500 text-white px-4 py-1 rounded-lg w-fit">Login</a>
     </nav>
     </div>
   </header>
@@ -69,6 +91,6 @@
       </p>
     </div>
   </div>
-
+<script src="script.js"></script>
 </body>
 </html>

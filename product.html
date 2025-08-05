@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-[#2D2D5D] font-sans">
+
+  <!-- Container -->
+  <div class="max-w-5xl mx-auto px-4 py-10">
+    <a href="products.html" class="text-[#7B4AE2] mb-6 inline-block hover:underline">← Back to Products</a>
+    
+    <div id="product-container" class="grid md:grid-cols-2 gap-10 items-start">
+      <!-- JS will inject product details here -->
+    </div>
+  </div>
+
+  <script>
+    const products = {
+      "keychain": {
+        name: "Wooden Keychain",
+        image: "assets/images/wooden-key.png",
+        price: "₹199",
+        description: "Your name, your style — carry it everywhere. A pocket-sized love letter.",
+        features: [
+          "Custom name engraving",
+          "Made from premium wood",
+          "Pocket-sized & lightweight",
+          "Perfect for gifting"
+        ]
+      },
+      "frame": {
+        name: "Personalised Frame",
+        image: "assets/images/wooden-frame.png",
+        price: "₹399",
+        description: "Frame a memory. Gift a moment. Perfect for any vibe.",
+        features: [
+          "High-quality print",
+          "Wooden frame included",
+          "Choose custom text or photo",
+          "Ready to hang or gift"
+        ]
+      },
+      "wooden-frame": {
+        name: "Personalised Wooden Frame",
+        image: "assets/images/frame.png",
+        price: "₹399",
+        description: "Frame a memory. Gift a moment. Perfect for any vibe.",
+        features: [
+          "High-quality print",
+          "Wooden frame included",
+          "Choose custom text or photo",
+          "Ready to hang or gift"
+        ]
+      },
+      "stickers": {
+        name: "Aesthetic Stickers",
+        image: "assets/images/couple-sitting.png",
+        price: "₹99",
+        description: "Vibe up your laptop, phone, journal — you name it. 100% aesthetic certified.",
+        features: [
+          "Pack of 20+ unique stickers",
+          "Waterproof & scratch-resistant",
+          "Perfect for journaling, laptops",
+          "Matte finish with vibrant colors"
+        ]
+      },
+      "personalised-cup": {
+        name: "Personalised Cup",
+        image: "assets/images/miso-cup.png",
+        price: "₹249",
+        description: "A customized cup for your daily sip. Because coffee tastes better when it's *yours*.",
+        features: [
+        "Custom name or text print",
+        "High-quality ceramic",
+        "Microwave and dishwasher safe",
+        "Perfect gift for tea/coffee lovers"
+        ]
+    },
+    "adiyogi-statue": {
+        name: "Adiyogi Statue",
+        image: "assets/images/shiva.png",
+        price: "₹599",
+        description: "Divine vibes in your room. This Adiyogi statue is more than decor — it's a feeling.",
+        features: [
+        "Intricately detailed sculpture",
+        "Black matte finish",
+        "Lightweight but durable",
+        "Spiritual aesthetic piece"
+        ]
+    }
+};
+
+ const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id') || urlParams.get('product'); // support both
+
+    const product = products[productId];
+    const container = document.getElementById("product-container");
+
+    if (product) {
+      container.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="rounded-lg shadow w-full h-auto max-h-[500px] object-cover">
+        <div>
+          <h1 class="text-3xl font-bold mb-2">${product.name}</h1>
+          <p class="text-xl text-[#7B4AE2] mb-4">${product.price}</p>
+          <p class="mb-4 text-gray-700">${product.description}</p>
+          <ul class="list-disc list-inside text-gray-600 mb-6">
+            ${product.features.map(f => `<li>${f}</li>`).join("")}
+          </ul>
+          <button class="bg-[#7B4AE2] text-white px-6 py-2 rounded-lg shadow hover:bg-[#633bd0] transition">
+            Add to Cart
+          </button>
+        </div>
+      `;
+    } else {
+      container.innerHTML = `<p class="text-red-500 text-lg">Product not found. Please try again.</p>`;
+    }
+  </script>
+</body>
+</html>
