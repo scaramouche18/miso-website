@@ -3,12 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Product Details</title>
+  <title>Miso | Product Details</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-[#2D2D5D] font-sans">
 
-  <!-- Container -->
+ <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md shadow-md">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <!-- Soft bubble background around logo -->
+        <div class=" logo-hover">
+            <img src="assets/images/miso-logo-removebg-preview-removebg-preview.png" alt="Miso Logo" class="h-14 w-auto logo-hover-effect" />
+        </div>
+        <!-- <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span> -->
+      </a>
+
+      <!-- Desktop Navbar -->
+      <nav class="hidden md:flex items-center gap-6 text-gray-800 font-semibold">
+        <a href="index.html" class="hover:text-pink-500 transition">Home</a>
+        <a href="about.html" class="hover:text-pink-500 transition">About</a>
+        <a href="products.html" class="hover:text-pink-500 transition">Products</a>
+        <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
+        <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+        <div class="flex gap-2 ml-2">
+        <a href="login.html" class="bg-pink-500 text-white px-4 py-1.5 rounded-lg shadow hover:bg-pink-600 transition">Login</a>
+        </div>
+      </nav>
+
+      <!-- Hamburger Icon -->
+      <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none text-3xl">
+        ☰
+      </button>
+    </div>
+    <!-- Mobile Nav (Right Side Drawer) -->
+    <!-- Compact Floating Sidebar (Top-Right) -->
+    <nav id="mobile-menu"
+      class="absolute top-16 right-4 bg-white shadow-lg rounded-lg z-50 w-48 transform scale-0 origin-top-right transition-transform duration-300 md:hidden flex flex-col p-4 text-gray-800 font-semibold space-y-3">
+      <a href="index.html" class="hover:text-pink-500 transition">Home</a>
+      <a href="about.html" class="hover:text-pink-500 transition">About</a>
+      <a href="products.html" class="hover:text-pink-500 transition">Products</a>
+      <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
+      <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+      <a href="./login.html" class="bg-pink-500 text-white px-4 py-1 rounded-lg w-fit">Login</a>
+    </nav>
+  </header>
+
+
+  <!-- ✅ Product Section -->
   <div class="max-w-5xl mx-auto px-4 py-10">
     <a href="products.html" class="text-[#7B4AE2] mb-6 inline-block hover:underline">← Back to Products</a>
     
@@ -17,6 +60,19 @@
     </div>
   </div>
 
+  <!-- ✅ Footer -->
+  <footer class="bg-[#2D2D5D] text-white py-6 mt-12">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <p>© 2025 Miso. All rights reserved.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-[#7B4AE2]">Instagram</a>
+        <a href="#" class="hover:text-[#7B4AE2]">Twitter</a>
+        <a href="#" class="hover:text-[#7B4AE2]">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ Script -->
   <script>
     const products = {
       "keychain": {
@@ -73,28 +129,28 @@
         price: "₹249",
         description: "A customized cup for your daily sip. Because coffee tastes better when it's *yours*.",
         features: [
-        "Custom name or text print",
-        "High-quality ceramic",
-        "Microwave and dishwasher safe",
-        "Perfect gift for tea/coffee lovers"
+          "Custom name or text print",
+          "High-quality ceramic",
+          "Microwave and dishwasher safe",
+          "Perfect gift for tea/coffee lovers"
         ]
-    },
-    "adiyogi-statue": {
+      },
+      "adiyogi-statue": {
         name: "Adiyogi Statue",
         image: "assets/images/shiva.png",
         price: "₹599",
         description: "Divine vibes in your room. This Adiyogi statue is more than decor — it's a feeling.",
         features: [
-        "Intricately detailed sculpture",
-        "Black matte finish",
-        "Lightweight but durable",
-        "Spiritual aesthetic piece"
+          "Intricately detailed sculpture",
+          "Black matte finish",
+          "Lightweight but durable",
+          "Spiritual aesthetic piece"
         ]
-    }
-};
+      }
+    };
 
- const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get('id') || urlParams.get('product'); // support both
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id') || urlParams.get('product'); // support both
 
     const product = products[productId];
     const container = document.getElementById("product-container");
