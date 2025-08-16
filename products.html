@@ -2,29 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Miso Products</title>
-  <link rel="icon" href="/assets/images/miso-logo.png" type="image/png" />
-  <meta name="description" content="Explore Miso's handpicked collection of aesthetic and heartfelt gifts. Personalised, thoughtful, unforgettable.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex flex-col min-h-screen bg-white text-[#2D2D5D]">
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar -->
+ <!-- Navbar -->
   <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md shadow-md">
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-3 flex justify-between items-center">
       <!-- Logo -->
       <a href="index.html" class="flex items-center space-x-2">
-        <div class="logo-hover">
-          <img src="assets/images/miso-logo-removebg-preview-removebg-preview.png" alt="Miso Logo" class="h-14 w-auto logo-hover-effect" />
+        <!-- Soft bubble background around logo -->
+        <div class=" logo-hover">
+            <img src="assets/images/miso-logo-removebg-preview-removebg-preview.png" alt="Miso Logo" class="h-14 w-auto logo-hover-effect" />
         </div>
+        <!-- <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span> -->
       </a>
 
       <!-- Desktop Navbar -->
@@ -35,15 +31,17 @@
         <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
         <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
         <div class="flex gap-2 ml-2">
-          <a href="login.html" class="bg-pink-500 text-white px-4 py-1.5 rounded-lg shadow hover:bg-pink-600 transition">Login</a>
+        <a href="login.html" class="bg-pink-500 text-white px-4 py-1.5 rounded-lg shadow hover:bg-pink-600 transition">Login</a>
         </div>
       </nav>
 
       <!-- Hamburger Icon -->
-      <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none text-3xl">☰</button>
+      <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none text-3xl">
+        ☰
+      </button>
     </div>
-
-    <!-- Mobile Nav -->
+    <!-- Mobile Nav (Right Side Drawer) -->
+    <!-- Compact Floating Sidebar (Top-Right) -->
     <nav id="mobile-menu"
       class="absolute top-16 right-4 bg-white shadow-lg rounded-lg z-50 w-48 transform scale-0 origin-top-right transition-transform duration-300 md:hidden flex flex-col p-4 text-gray-800 font-semibold space-y-3">
       <a href="index.html" class="hover:text-pink-500 transition">Home</a>
@@ -53,44 +51,65 @@
       <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
       <a href="./login.html" class="bg-pink-500 text-white px-4 py-1 rounded-lg w-fit">Login</a>
     </nav>
+</header>
+  <!-- Page Title -->
+  <header class="py-12 text-center">
+    <h1 class="text-4xl font-bold mb-2">Our Products</h1>
+    <p class="text-gray-500">Browse by category or explore all items</p>
   </header>
 
-  <!-- Main Content -->
-  <main class="flex-grow px-6 py-16 max-w-6xl mx-auto text-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-[#7B4AE2] mb-6">Our Products</h1>
-    <p class="text-gray-600 mb-12 text-lg">Each Miso creation is crafted with love — just for you.</p>
+  <!-- Category Filters -->
+  <div class="flex flex-wrap gap-4 mb-10 justify-center">
+    <button class="category-btn px-4 py-2 rounded-lg bg-[#7B4AE2] text-white hover:bg-[#633bd0]" data-category="all">All</button>
+    <button class="category-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-category="cups">Cups</button>
+    <button class="category-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-category="frames">Frames</button>
+    <button class="category-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-category="statues">Statues</button>
+    <button class="category-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-category="stickers">Stickers</button>
+  </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+  <!-- Products Grid -->
+  <section id="products" class="max-w-6xl mx-auto px-4 pb-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    
+    <!-- Product 1 -->
+    <a href="product.html?product=personalised-cup" 
+       class="product-card block bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition" 
+       data-category="cups" data-aos="zoom-in">
+      <img src="assets/images/miso-cup.png" alt="Personalised Cup" class="rounded-lg mb-4">
+      <h3 class="font-semibold text-lg">Personalised Cup</h3>
+      <p class="text-sm text-gray-500">Custom printed cup with your design</p>
+    </a>
 
-      <!-- Product 1 -->
-      <a href="product.html?id=keychain" class="bg-white border rounded-xl p-4 shadow hover:shadow-lg transition block">
-        <img src="assets/images/wooden-key.png" alt="Wooden Keychain Gift" class="rounded-md mb-4 h-48 w-full object-cover">
-        <h3 class="text-lg font-semibold mb-2">Wooden Keychain</h3>
-        <p class="text-sm text-gray-500 mb-3">Your name, your style — carry it everywhere. A pocket-sized love letter.</p>
-        <p class="text-md font-medium mb-2 text-[#7B4AE2]">₹199</p>
-        <span class="inline-block bg-[#7B4AE2] text-white px-4 py-2 rounded-full text-sm hover:bg-[#633bd0]">View Details</span>
-      </a>
+    <!-- Product 2 -->
+    <a href="product.html?product=wooden-frame" 
+       class="product-card block bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition" 
+       data-category="frames" data-aos="zoom-in" data-aos-delay="100">
+      <img src="assets/images/frame.png" alt="Wooden Frame" class="rounded-lg mb-4">
+      <h3 class="font-semibold text-lg">Wooden Frame</h3>
+      <p class="text-sm text-gray-500">Elegant engraved wooden frame</p>
+    </a>
 
-      <!-- Product 2 -->
-      <a href="product.html?id=frame" class="bg-white border rounded-xl p-4 shadow hover:shadow-lg transition block">
-        <img src="assets/images/wooden-frame.png" alt="Custom Photo Frame Gift" class="rounded-md mb-4 h-48 w-full object-cover">
-        <h3 class="text-lg font-semibold mb-2">Personalised Frame</h3>
-        <p class="text-sm text-gray-500 mb-3">Frame a memory. Gift a moment. Perfect for any vibe.</p>
-        <p class="text-md font-medium mb-2 text-[#7B4AE2]">₹399</p>
-        <span class="inline-block bg-[#7B4AE2] text-white px-4 py-2 rounded-full text-sm hover:bg-[#633bd0]">View Details</span>
-      </a>
+    <!-- Product 3 -->
+    <a href="product.html?product=adiyogi-statue" 
+       class="product-card block bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition" 
+       data-category="statues" data-aos="zoom-in" data-aos-delay="200">
+      <img src="assets/images/shiva.png" alt="Adiyogi Statue" class="rounded-lg mb-4">
+      <h3 class="font-semibold text-lg">Adiyogi Statue</h3>
+      <p class="text-sm text-gray-500">Spiritual decor for your space</p>
+    </a>
 
-      <!-- Product 3 -->
-      <a href="product.html?id=stickers" class="bg-white border rounded-xl p-4 shadow hover:shadow-lg transition block">
-        <img src="assets/images/couple-sitting.png" alt="Aesthetic Stickers Gift" class="rounded-md mb-4 h-48 w-full object-cover">
-        <h3 class="text-lg font-semibold mb-2">Aesthetic Stickers</h3>
-        <p class="text-sm text-gray-500 mb-3">Vibe up your laptop, phone, journal — you name it. 100% aesthetic certified.</p>
-        <p class="text-md font-medium mb-2 text-[#7B4AE2]">₹99</p>
-        <span class="inline-block bg-[#7B4AE2] text-white px-4 py-2 rounded-full text-sm hover:bg-[#633bd0]">View Details</span>
-      </a>
+    <!-- Product 4 -->
+    <a href="product.html?product=anime-sticker-pack" 
+       class="product-card block bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition" 
+       data-category="stickers" data-aos="zoom-in" data-aos-delay="300">
+      <img src="assets/images/stickers.png" alt="Anime Sticker Pack" class="rounded-lg mb-4">
+      <h3 class="font-semibold text-lg">Anime Sticker Pack</h3>
+      <p class="text-sm text-gray-500">Trendy stickers for laptops & bottles</p>
+    </a>
 
-    </div>
-  </main>
+  </section>
+
+<!-- FOOTER -->
+
 
   <footer class="footer">
     <!-- Decorative elements -->
@@ -215,9 +234,30 @@
     // Initialize Lucide icons
     lucide.createIcons();
   </script>
+  <!-- Scripts -->
+  <script>
+    AOS.init();
 
-  <!--Footer -->
+    const buttons = document.querySelectorAll(".category-btn");
+    const products = document.querySelectorAll(".product-card");
 
-  <script src="script.js"></script>
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const category = btn.getAttribute("data-category");
+
+        products.forEach(prod => {
+          if (category === "all" || prod.getAttribute("data-category") === category) {
+            prod.style.display = "block";
+          } else {
+            prod.style.display = "none";
+          }
+        });
+
+        // Active button style
+        buttons.forEach(b => b.classList.remove("bg-[#7B4AE2]", "text-white"));
+        btn.classList.add("bg-[#7B4AE2]", "text-white");
+      });
+    });
+  </script>
 </body>
 </html>
